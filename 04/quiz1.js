@@ -9,57 +9,45 @@ var todayPhoto = [
         ,{"url":"http://sports.media.daum.net/general/gallery/STARKIMYUNA/index.html","img":"http://icon.daumcdn.net/w/c/12/05/81727815537682839.jpeg","title":"&#39;교생&#39; 김연아, 스승의날에도 인기폭발","id":"20120516092003892"}
 ];
 
-var wrap = document.getElementById('wrap');
-
-var str = ''; 
 var num = 0; // 사진을 전환하기 위한 전역 변수
 
-for(i=num; i<num+3; i++)
-{
-    str += '<img src="'+todayPhoto[i].img+'">' + todayPhoto[i].title + " ";  
-}
-
-wrap.innerHTML = str;
-
 var backBtn = document.getElementById('backBtn');
-backBtn.addEventListener("click", back);
-
 var nextBtn = document.getElementById('nextBtn');
-nextBtn.addEventListener("click", next);
+var wrap = document.getElementById('wrap');
 
 function back() // 좌 버튼 함수
 {       
-    if (num >= 1) // 오류 방지를 위해, num이 1 이상일 때만 작동
+    if (num >= 1) // num이 1 이상일 때만 작동
     {
-        num = num -1;
-        var str = ''; // str 초기화 
-
-        for(i=num; i<num+3; i++)
-        {
-            str += '<img src="'+todayPhoto[i%8].img+'"> ' + todayPhoto[i%8].title + " ";
-        }    
-        wrap.innerHTML = str; 
-
-        text(num);
-    } else { }     
+        num--; 
+        print(num);
+    }
+    else { }     
 }
 
 function next() // 우 버튼 함수
 {     
     num++;
-    var str = ''; // str 초기화   
-
-    for(i=num; i<num+3; i++)
-    {
-        str += '<img src="'+todayPhoto[i%8].img+'"> ' + todayPhoto[i%8].title + " ";
-    }    
-    wrap.innerHTML = str;
-
-    text(num);    
+    print(num);
 }
+
+backBtn.addEventListener("click", back);
+nextBtn.addEventListener("click", next);
 
 function text(num) // 가운데 텍스트가 바뀌는 함수
 {
     var count = ( (num%8)+1 + " / " + todayPhoto.length );
     document.getElementById('text').innerHTML = count; // id=text 를 찾아 텍스트를 집어 넣는다.   
 }
+
+function print(num) {
+    var str = ''; // str 초기화 
+    for(i=num; i<num+3; i++)
+    {
+        str += '<img src="'+todayPhoto[i%8].img+'"> ' + todayPhoto[i%8].title + " ";
+    }    
+    wrap.innerHTML = str; 
+    text(num);
+}
+
+print(num);       
