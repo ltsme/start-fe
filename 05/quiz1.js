@@ -54,7 +54,7 @@ var page = 1;
 var totalPage = Math.ceil(todayPhoto.length / listNum);
 
 var $wrap = document.getElementById('wrap');
-var $btnPrev = document.querySelector('.btn-prev')
+var $btnPresv = document.querySelector('.btn-prev')
 var $btnNext = document.querySelector('.btn-next')
 var $page = document.querySelector('.page');
 var $totalPage = document.querySelector('.total-page');
@@ -85,7 +85,7 @@ function printImg(page){
     var str = '';
     for(var i= startIndex; i< startIndex + listNum; i++){
         if(todayPhoto[i]){
-            str += '<img src="'+todayPhoto[i].img+'"> ';
+            str += '<img src="' + todayPhoto[i].img + '"> ';
         }        
     }
 
