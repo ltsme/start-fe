@@ -55,7 +55,7 @@ function btnHit(event) {
 
 function start() {
     clearInterval(timerId);    
-    timerId = setInterval(move, refresh);
+    timerId = setInterval(move,  refresh);
 }
 
 start();

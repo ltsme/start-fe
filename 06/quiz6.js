@@ -7,7 +7,7 @@ function print(event){
     const num = parseInt($num.value);
 
     if(isNaN(num)) {
-        alert('숫자를 입력하세요');
+        alert('숫자 를 입력하세요');
         return;
     }
 

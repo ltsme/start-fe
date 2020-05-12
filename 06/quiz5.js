@@ -12,7 +12,7 @@ function startDragDom(el) {
 
         offset.x = el.offsetLeft - event.clientX;
         offset.y = el.offsetTop - event.clientY;
-    });
+    }) ;
 
 }
 
