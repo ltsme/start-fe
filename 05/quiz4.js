@@ -20,6 +20,6 @@ document.body.addEventListener('mousemove', (event) => {
     if(!isClick) return;
     console.log(event.clientX, event.clientY);
 
-    $box.style.left = event.clientX + offset.x;
-    $box.style.top = event.clientY + offset.y;
+    $box.style.left = event.clientX + offset.x + 'px';
+    $box.style.top = event.clientY + offset.y + 'px';
 });
