@@ -21,5 +21,5 @@ document.body.addEventListener('mousemove', (event) => {
     console.log(event.clientX, event.clientY);
 
     $box.style.left = event.clientX + offset.x + 'px';
-    $box.style.top = event.clientY + offset.y + 'px';
+    $box.style.top = event.clientY + offset.y +  'px';
 });
