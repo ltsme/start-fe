@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz9</title>
+    <link rel="stylesheet" href="./quiz9.css" />
+  </head>
+  
+  <body>
+    <div class="container">
+      <h1>Quiz9</h1>
+      <ul>
+        <li>주소를 입력하고 가져오기 버튼 클릭</li>
+        <li>성공 시(ex : quiz9.html) : 내용 출력 </li>
+        <li>에러 시(ex : https://daum.net) : fetch 실패 문구 출력</li>
+      </ul>
+
+      <div>
+        <input type="text" id="URL" placeholder="url을 입력해 주세요" />
+        <button id="button">가져오기</button>
+      </div>
+      
+      <textarea id="log" placeholder="내용"></textarea>
+    </div>
+    
+    <script src="quiz9.js"></script>
+  </body>
+
+</html>
