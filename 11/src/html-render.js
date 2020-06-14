@@ -1,7 +1,10 @@
+import { saveData } from './data-manager';
+
 const $result = document.querySelector('#result');
 
-// eslint-disable-next-line import/prefer-default-export
 function render(data) {
+  saveData(data);
+
   const html = data.map((todo, index) => {
     return `<li data-index="${index}">
             <button class="delete">×</button>
