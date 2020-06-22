@@ -4,6 +4,10 @@ module.exports = {
     es2020: true,
   },
   extends: ['eslint:recommended', 'airbnb-base', 'prettier'],
+  globals: {
+    React: true,
+    ReactDOM: true,
+  },
   parserOptions: {
     ecmaVersion: 11,
     sourceType: 'module',
